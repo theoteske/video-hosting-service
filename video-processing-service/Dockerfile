@@ -1,4 +1,4 @@
-# Stage 1: Build stage
+# Build stage
 FROM node:18 AS builder
 
 # Set the working directory in the container to /app
@@ -16,7 +16,7 @@ COPY . .
 # Build the app
 RUN npm run build
 
-# Stage 2: Production stage
+# Production stage
 FROM node:18
 
 # Install ffmpeg in the container
@@ -37,5 +37,5 @@ COPY --from=builder /app/dist ./dist
 # Make port 3000 available to the world outside this container
 EXPOSE 3000
 
-# Define the command to run your app using CMD which defines your runtime
+# Define the command to run the app using CMD which defines your runtime
 CMD [ "npm", "run", "serve" ]
