@@ -1,12 +1,8 @@
 import express from "express";
+import ffmpeg from "fluent-ffmpeg";
 
 const app = express();
 app.use(express.json());
-
-// set ffmpeg path
-const ffmpegPath = require('@ffmpeg-installer/ffmpeg').path;
-const ffmpeg = require('fluent-ffmpeg');
-ffmpeg.setFfmpegPath(ffmpegPath);
 
 // simple GET endpoint to print "Hello, World!"
 app.get("/", (req, res) => {
