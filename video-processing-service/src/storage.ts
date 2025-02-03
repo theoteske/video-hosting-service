@@ -11,6 +11,18 @@ const localRawVideoPath = "./raw-videos";
 const localProcessedVideoPath = "./processed-videos";
 
 /**
+ * Ensures that a directory exists at the given file path.
+ * 
+ * @param dirPath The directory path to check or create.
+ */
+function ensureDirectoryExistence(dirPath: string): void {
+    if (!fs.existsSync(dirPath)) {
+        fs.mkdirSync(dirPath, { recursive: true }) // recursive true enables nested directory creation
+        console.log(`Directory created at ${dirPath}`)
+    }
+}
+
+/**
  * Creates the local directories for raw and processed videos.
  */
 export function setupDirectories(): void {
@@ -85,7 +97,7 @@ export async function uploadProcessedVideo(fileName: string): Promise<void> {
 function deleteFile(filePath: string): Promise<void> {
     return new Promise((resolve, reject) => {
         if (!fs.existsSync(filePath)) {
-            reject(`File not found at ${filePath}`); //debatable, could be console.log() the error then resolve
+            reject(`File not found at ${filePath}`); //TODO: debatable, could be console.log() the error then resolve
         } else {
             fs.unlink(filePath, (err) => {
                 if (err) {
@@ -118,17 +130,4 @@ export function deleteRawVideoFile(fileName: string): Promise<void> {
  */
 export function deleteProcessedVideoFile(fileName: string): Promise<void> {
     return deleteFile(`${localProcessedVideoPath}/${fileName}`);
-}
-
-/**
- * Ensures that a directory exists at the given file path.
- * 
- * @param dirPath The directory path to check or create.
- */
-export function ensureDirectoryExistence(dirPath: string): void {
-    if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath, { recursive: true }) // recursive true enables nested directory creation
-        console.log(`Directory created at ${dirPath}`)
-    }
-    
 }
