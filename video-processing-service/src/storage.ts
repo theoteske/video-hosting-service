@@ -85,7 +85,7 @@ export async function uploadProcessedVideo(fileName: string): Promise<void> {
         `${localProcessedVideoPath}/${fileName} uploaded to gs://${processedVideoBucketName}/${fileName}`
     );
 
-    await bucket.file(fileName).makePublic();
+    await bucket.file(fileName).makePublic(); //specify that file should be public, not the default in GCP
 }
 
 /**
