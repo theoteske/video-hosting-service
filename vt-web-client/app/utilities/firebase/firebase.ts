@@ -38,3 +38,13 @@ export function signInWithGoogle(): Promise<UserCredential> {
 export function signOut(): Promise<void> {
     return auth.signOut();
 }
+
+/**
+ * Trigger a callback when user auth state changes.
+ * 
+ * @param callback A function to unsubscribe callback.
+ * @returns A function to unsubscribe callback.
+ */
+export function onAuthStateChangedHelper(callback: (user: User | null) => void) {
+    return onAuthStateChanged(auth, callback);
+}
