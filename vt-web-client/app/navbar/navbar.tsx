@@ -7,7 +7,7 @@ import { User } from "firebase/auth";
 
 import styles from "./navbar.module.css"
 import SignIn from "./signin";
-import { onAuthStateChangedHelper } from "../utilities/firebase/firebase";
+import { onAuthStateChangedHelper } from "../utils/firebase/firebase";
 
 export default function Navbar() {
     // Initialize user state
