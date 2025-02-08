@@ -8,6 +8,7 @@ import { User } from "firebase/auth";
 import styles from "./navbar.module.css"
 import SignIn from "./signin";
 import { onAuthStateChangedHelper } from "../utils/firebase/firebase";
+import Upload from "./upload";
 
 export default function Navbar() {
     // Initialize user state
@@ -29,6 +30,9 @@ export default function Navbar() {
                     src="/youtube-logo.svg" alt="Youtube Logo"/>
                 </span>
             </Link>
+            {
+                user && <Upload />
+            }
             <SignIn user={user} />
         </nav>
     );
