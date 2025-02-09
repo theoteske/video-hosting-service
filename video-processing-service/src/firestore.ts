@@ -2,7 +2,10 @@ import { credential } from "firebase-admin";
 import { initializeApp } from "firebase-admin/app";
 import { Firestore } from "firebase-admin/firestore";
 
-initializeApp({credential: credential.applicationDefault()});
+initializeApp({
+    credential: credential.applicationDefault(),
+    projectId: "viewtube-e2b83"
+});
 
 const firestore = new Firestore();
 const videoCollectionId = "videos";
