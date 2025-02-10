@@ -4,7 +4,7 @@ A scalable video hosting service built with Google Cloud Platform and Next.js.
 
 ## Overview
 
-ViewTube is a full-stack video hosting service that allows users to upload and watch videos. The service leverages Google Cloud Platform to handle video processing at scale.
+ViewTube is a full-stack video hosting service that allows users to upload and watch videos. The service leverages Google Cloud Platform to handle video processing at scale. See it in action at https://vt-web-client-265437101019.us-central1.run.app.
 
 ## Architecture
 
