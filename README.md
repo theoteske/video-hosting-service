@@ -31,7 +31,10 @@ The application utilizes several GCP services in a microservices architecture:
 
 ## Technical Stack
 
-### Backend Services
+### Backend
+- TypeScript
+- Express.js
+- FFmpeg for video transcoding
 - Google Cloud Platform
   - Cloud Storage
   - Cloud Pub/Sub
@@ -41,14 +44,10 @@ The application utilizes several GCP services in a microservices architecture:
   - Firebase Functions
 
 ### Frontend
-- Next.js
-- React
 - TypeScript
+- React
+- Next.js
 - Tailwind CSS
-
-### Video Processing
-- FFmpeg for video transcoding
-- Cloud Run workers for scalable processing
 
 ## System Design
 
