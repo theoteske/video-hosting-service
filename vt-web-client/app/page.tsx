@@ -1,14 +1,20 @@
-import styles from './page.module.css'
+import styles from "./page.module.css";
+import Link from "next/link";
+import Image from "next/image";
+import { getVideos } from "./utils/firebase/functions";
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-      </div>
-    </main>
-  )
+export default async function Home() {
+    const videos = await getVideos();
+
+    return (
+        <main>
+            {
+                videos.map((video) => (
+                    <Link key={video.filename} href={`/watch?v=${video.filename}`}>
+                        <Image src={"/thumbnail.png"} alt="video" width={120} height={80} className={styles.thumbnail}/>
+                    </Link>
+                ))
+            }
+        </main>
+    )
 }
