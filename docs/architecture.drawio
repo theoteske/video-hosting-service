@@ -80,7 +80,7 @@
         <mxCell id="hUYAWYeTVVkkkwqr7jyL-55" value="&lt;font face=&quot;Tahoma&quot;&gt;Authentication&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#eeeeee;strokeColor=#36393d;opacity=50;" parent="1" vertex="1">
           <mxGeometry x="59" y="265" width="170" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="hUYAWYeTVVkkkwqr7jyL-56" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;Raw Videos&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Tahoma;fillColor=#647687;strokeColor=#314354;verticalAlign=bottom;fontColor=#E6E6E6;" parent="1" vertex="1">
+        <mxCell id="hUYAWYeTVVkkkwqr7jyL-56" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;Firebase Auth&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Tahoma;fillColor=#647687;strokeColor=#314354;verticalAlign=bottom;fontColor=#E6E6E6;" parent="1" vertex="1">
           <mxGeometry x="84" y="303" width="120" height="90" as="geometry" />
         </mxCell>
         <mxCell id="hUYAWYeTVVkkkwqr7jyL-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;curved=1;strokeColor=#C4C4C4;strokeWidth=2;" parent="1" source="hUYAWYeTVVkkkwqr7jyL-57" target="hUYAWYeTVVkkkwqr7jyL-2" edge="1">
